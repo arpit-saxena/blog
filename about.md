@@ -3,27 +3,22 @@ layout: page
 title: About
 ---
 
-<p class="message">
-  Hey there! This page is included as an example. Feel free to customize it for your own use upon downloading. Carry on!
-</p>
+Hi there. I'm Arpit Saxena, currently a student at IIT Delhi pursuing a B.Tech. in Mathematics and Computing.
+I made this blog primarily so I could have a better understanding of things by writing about them, and consequently sharing the stuff I learnt.
+There would primarily be stuff related to things software related, but no guarantees to the quality :P
 
-In the novel, *The Strange Case of Dr. Jeykll and Mr. Hyde*, Mr. Poole is Dr. Jekyll's virtuous and loyal butler. Similarly, Poole is an upstanding and effective butler that helps you build Jekyll themes. It's made by [@mdo](https://twitter.com/mdo).
+## Places you can find me
 
-There are currently two themes built on Poole:
+* [GitHub](https://www.github.com/arpit-saxena/)
+* [LinkedIn](https://www.linkedin.com/in/saxena-arpit/)
+* [Email](mailto:arpit.saxena2000@yahoo.in)
 
-* [Hyde](http://hyde.getpoole.com)
-* [Lanyon](http://lanyon.getpoole.com)
+## Contact me
 
-Learn more and contribute on [GitHub](https://github.com/poole).
+Got any feedback? I was too lazy to setup commenting, so feel free to contact me at my email id mentioned above.
 
-## Setup
+## Acknowledgements
 
-Some fun facts about the setup of this project include:
-
-* Built for [Jekyll](https://jekyllrb.com)
-* Developed on GitHub and hosted for free on [GitHub Pages](https://pages.github.com)
-* Coded with [Atom](https://atom.io)
-
-Have questions or suggestions? Feel free to [open an issue on GitHub](https://github.com/poole/issues/new) or [ask me on Twitter](https://twitter.com/mdo).
+This blog has been made on top of [Lanyon](https://github.com/poole/lanyon) which is an unassuming Jekyll theme based on Poole.
 
 Thanks for reading!
