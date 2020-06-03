@@ -5,6 +5,7 @@ url:                 https://arpit-saxena.github.io
 baseurl:             ''
 paginate:            1
 permalink:           pretty
+highlighter:         rouge
 
 # About/contact
 author:
