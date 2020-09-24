@@ -3,7 +3,7 @@ title:               Arpit's blog
 description:         'A blog where I hopefully put things I find interesting'
 url:                 https://arpit-saxena.github.io
 baseurl:             ''
-paginate:            1
+paginate:            5
 permalink:           pretty
 highlighter:         rouge
 
