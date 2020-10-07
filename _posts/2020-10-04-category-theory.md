@@ -9,33 +9,27 @@ In this post, I will talk about the definition of category theory, how I think a
 
 Think about a collection of sets and all functions acting on them. Let me state some properties of these:
 
-{% katexmm %}
+- **Composition**: We know that functions compose. Composition of functions $$f: A \to B$$ and $$g: B \to C$$ is written as $$g \circ f: A \to C$$ which is defined as $$(g \circ f)(x) = g(f(x)) \:\forall x \in A$$.
+- **Associativity**: We know that function compositions are associative i.e. for functions $$f: A \to B$$, $$g: B \to C$$, $$h: C \to D$$; we have $$h \circ (g \circ f) = (h \circ g) \circ f$$ i.e. $$\forall x \in A, (h \circ (g \circ f))(x) = h(g(f(x))) = ((h \circ g) \circ f)(x)$$
+- **Identity**: For each set $$A$$ we have a function $$id_A : A \to A$$ such that $$id_A(x) = x \:\forall x \in A$$
 
-- **Composition**: We know that functions compose. Composition of functions $f: A \to B$ and $g: B \to C$ is written as $g \circ f: A \to C$ which is defined as $(g \circ f)(x) = g(f(x)) \:\forall x \in A$.
-- **Associativity**: We know that function compositions are associative i.e. for functions $f: A \to B$, $g: B \to C$, $h: C \to D$; we have $h \circ (g \circ f) = (h \circ g) \circ f$ i.e. $\forall x \in A, (h \circ (g \circ f))(x) = h(g(f(x))) = ((h \circ g) \circ f)(x)$
-- **Identity**: For each set $A$ we have a function $id_A : A \to A$ such that $id_A(x) = x \:\forall x \in A$
-
-The sets and functions can be thought of as a directed graph where for each set, you have a node and for each function mapping set $A$ to $B$, you have an arrow going from node $A$ to node $B$ in your directed graph.
-
-{% endkatexmm %}
+The sets and functions can be thought of as a directed graph where for each set, you have a node and for each function mapping set $$A$$ to $$B$$, you have an arrow going from node $$A$$ to node $$B$$ in your directed graph.
 
 In the directed graph as described above, arrows (functions) compose, the composition is associative and there is an identity arrow (identity function) for each object (set). A category looks just like this picture but we abstract out sets and functions to objects and morphisms respectively.
 
 ## Category : Definition
 
-{% katexmm %}
-A category $C$ consists of
+A category $$C$$ consists of
 
 - A collection[^1] of objects
-- A collection of morphisms, or arrows, between the objects. Each morphism $f$ has a source object $A$ and a target object $B$, and we say "$f$ is a morphism from $A$ to $B$". We denote collection of all morphisms between two objects $A$ and $B$ as $hom(A, B)$.
-- For every three objects $A$, $B$ and $C$, a binary operation $\circ : hom(A, B) \times hom(B, C) \to hom(A, C)$ called composition of morphisms.
+- A collection of morphisms, or arrows, between the objects. Each morphism $$f$$ has a source object $$A$$ and a target object $$B$$, and we say "$$f$$ is a morphism from $$A$$ to $$B$$". We denote collection of all morphisms between two objects $$A$$ and $$B$$ as $$hom(A, B)$$.
+- For every three objects $$A$$, $$B$$ and $$C$$, a binary operation $$\circ : hom(A, B) \times hom(B, C) \to hom(A, C)$$ called composition of morphisms.
 
 The following conditions must hold:
 
-- **Associativity**: If $f: A \to B$, $g: B \to C$ and $h: C \to D$ then $h \circ (g \circ f) = (h \circ g) \circ f$
-- **Identity**: For every object $A$, there exists a morphism $id_A : A \to A$ called the identity morphism for $A$, such that for every morphism $f : X \to A$ and $g : A \to X$, we have
-$id_A \circ f = f$ and $g \circ id_A = g$
-{% endkatexmm %}
+- **Associativity**: If $$f: A \to B$$, $$g: B \to C$$ and $$h: C \to D$$ then $$h \circ (g \circ f) = (h \circ g) \circ f$$
+- **Identity**: For every object $$A$$, there exists a morphism $$id_A : A \to A$$ called the identity morphism for $$A$$, such that for every morphism $$f : X \to A$$ and $$g : A \to X$$, we have
+$$id_A \circ f = f$$ and $$g \circ id_A = g$$
 
 ## Thinking categorically
 
