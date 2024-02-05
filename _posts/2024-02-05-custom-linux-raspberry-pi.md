@@ -1,7 +1,6 @@
 ---
 layout: post
 title: "Custom Linux build on Raspberry Pi"
-hidden: true
 ---
 
 I recently built and installed Linux on my Raspberry Pi 4B. This post is a reference with links to tutorials I followed including corrections to what worked and what didn't, mainly intended for future reference.
