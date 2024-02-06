@@ -44,3 +44,26 @@ The post, [Boot a Raspberry Pi 4 using u-boot and Initramfs](https://hechao.li/2
 ## Conclusion
 
 This gets one's own built Linux running on Raspberry Pi 4B. Though the userspace is lacking since it only has a busybox shell, this should be easily upgradeable since at this point the kernel is passing control to the init system properly. Perhaps someday when this setup is stable that I'm working on it via ssh over Wi-Fi, I will try to make something like tryboot work so kernel can be upgraded over ssh. Till then, adios :)
+
+## Appendix: Changes to environment before rebuilding
+
+Some changes need to be made to the PATH and other variables for rebuilding after opening a new terminal. Note that these are taken from [the tutorial mentioned above](https://hechao.li/2021/12/20/Boot-Raspberry-Pi-4-Using-uboot-and-Initramfs/) and are here just for easy reference:
+
+1. **Cross Compiler**: `export PATH=${HOME}/x-tools/aarch64-rpi4-linux-gnu/bin/:$PATH`: Setup before running any other command
+2. **U-Boot**:
+   1. `export CROSS_COMPILE=aarch64-rpi4-linux-gnu-`: To use the cross compiler
+   2. `make`: Build U-Boot
+   3. `cp u-boot.bin /media/arpit/bootfs`: Copy U-Boot binary to bootfs
+   4. `./tools/mkimage -A arm64 -O linux -T script -C none -d boot_cmd.txt boot.scr; cp boot.scr /media/arpit/bootfs/`: Change boot commands
+3. **Kernel**:
+   1. `make -j8 ARCH=arm64 CROSS_COMPILE=aarch64-rpi4-linux-gnu-`: Build kernel
+   2. `cp arch/arm64/boot/Image /media/arpit/bootfs`: Copy kernel image to bootfs
+   3. `cp arch/arm64/boot/dts/broadcom/bcm2711-rpi-4-b.dtb /media/arpit/bootfs/`: Copy DTB file to bootfs (not needed if source DTS file is unchanged)
+4. **BusyBox**:
+
+   ```sh
+   CROSS_COMPILE=${HOME}/x-tools/aarch64-rpi4-linux-gnu/bin/aarch64-rpi4-linux-gnu-
+   make CROSS_COMPILE="$CROSS_COMPILE" # Build
+   sudo make CROSS_COMPILE="$CROSS_COMPILE" install # Install in /media/arpit/rootfs, sudo since it's owned by root
+   ```
+
