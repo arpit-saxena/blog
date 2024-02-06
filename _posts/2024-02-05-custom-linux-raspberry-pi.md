@@ -66,4 +66,3 @@ Some changes need to be made to the PATH and other variables for rebuilding afte
    make CROSS_COMPILE="$CROSS_COMPILE" # Build
    sudo make CROSS_COMPILE="$CROSS_COMPILE" install # Install in /media/arpit/rootfs, sudo since it's owned by root
    ```
-
